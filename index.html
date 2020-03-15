@@ -1,0 +1,783 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WRZ48SD');</script>
+<!-- End Google Tag Manager -->
+
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js">
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <script src="./slick/slick.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/script.js"></script>
+    <title>Приложение для студентов</title>
+</head>
+
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WRZ48SD"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+    <div class="modal fade" id="nav" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content navbar-modal">
+                <div class="modal-header">
+                    <a class="navbar-brand exbold" href="#"><svg class="logo" width="177" height="48"
+                            viewBox="0 0 177 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M42.7305 8.34784V39.6522C46.3994 35.4417 48.586 29.9863 48.586 24.0183C48.586 18.0504 46.3624 12.5584 42.7305 8.34784Z"
+                                fill="#95CA49" />
+                            <path
+                                d="M31.6495 40.7872C29.2406 41.9588 26.6093 42.5446 23.7557 42.5446C18.6784 42.5446 14.3423 40.714 10.7475 37.0892C7.15264 33.4645 5.33668 29.0343 5.33668 23.7986C5.33668 18.7094 7.15264 14.3158 10.7845 10.6911C14.4165 7.06636 18.7896 5.2357 23.8668 5.2357C26.8317 5.2357 29.4629 5.85812 31.8719 7.10297C34.2437 8.34783 36.3562 10.2151 38.1721 12.6682V4.24714C34.2437 1.57437 29.4629 0 24.2745 0C10.8587 0 0 10.7277 0 23.9817C0 37.2357 10.8587 47.9634 24.2745 47.9634C29.4259 47.9634 34.2067 46.389 38.1351 43.6796V35.5515C36.2079 37.8947 34.0584 39.6156 31.6495 40.7872Z"
+                                fill="#95CA49" />
+                            <path
+                                d="M24.2746 9.66589C21.7174 9.66589 19.3455 10.2883 17.159 11.5332C14.9724 12.778 13.2677 14.5355 11.9705 16.8055C10.6734 19.0755 10.0063 21.4554 10.0063 23.9817C10.0063 26.4714 10.6364 28.8512 11.9335 31.1579C13.2306 33.4279 14.9724 35.222 17.159 36.4668C19.3455 37.7483 21.6803 38.3707 24.2004 38.3707C26.7205 38.3707 29.1295 37.7483 31.3901 36.4668C33.6508 35.222 35.3927 33.5011 36.6156 31.3409C37.8386 29.1808 38.4316 26.7643 38.4316 24.0915C38.4316 19.9908 37.0604 16.5492 34.3179 13.8032C31.6125 11.0572 28.24 9.66589 24.2746 9.66589Z"
+                                fill="#95CA49" />
+                            <path
+                                d="M74.417 17.5377H78.6789V34.27H74.417V32.5126C73.6017 33.2815 72.7493 33.8673 71.934 34.1968C71.0816 34.5263 70.1921 34.7094 69.2286 34.7094C67.042 34.7094 65.1519 33.8673 63.5583 32.1831C61.9647 30.4988 61.1494 28.4119 61.1494 25.9222C61.1494 23.3226 61.9277 21.2357 63.4472 19.5881C65.0037 17.9405 66.8567 17.0984 69.0803 17.0984C70.0809 17.0984 71.0445 17.2815 71.934 17.6842C72.8234 18.0503 73.6387 18.6361 74.417 19.405V17.5377V17.5377ZM69.9327 20.9794C68.6356 20.9794 67.5238 21.4554 66.6714 22.3707C65.819 23.286 65.3743 24.4577 65.3743 25.8856C65.3743 27.3135 65.819 28.5217 66.7085 29.4371C67.5979 30.3524 68.6727 30.8284 69.9698 30.8284C71.3039 30.8284 72.4158 30.3524 73.3052 29.4371C74.1946 28.5217 74.6394 27.3135 74.6394 25.849C74.6394 24.3844 74.1946 23.2128 73.3052 22.2975C72.4158 21.4188 71.3039 20.9794 69.9327 20.9794Z"
+                                fill="black" />
+                            <path
+                                d="M83.0522 17.5377H87.3141V19.4416C88.0553 18.6361 88.8336 18.0503 89.7231 17.6842C90.6125 17.2815 91.5761 17.0984 92.6138 17.0984C93.6885 17.0984 94.615 17.3547 95.4674 17.8673C96.3198 18.3799 96.9869 19.1121 97.5057 20.1007C98.1728 19.1121 99.0252 18.3799 99.9887 17.8673C100.952 17.3547 102.027 17.0984 103.213 17.0984C104.399 17.0984 105.474 17.3913 106.4 17.9405C107.327 18.4897 107.957 19.222 108.364 20.1007C108.772 20.9794 108.957 22.4439 108.957 24.4577V34.27H104.695V25.7757C104.695 23.8718 104.473 22.5904 103.991 21.9313C103.509 21.2723 102.805 20.9062 101.842 20.9062C101.101 20.9062 100.471 21.1258 99.8776 21.5286C99.2846 21.9313 98.8769 22.5172 98.5805 23.2128C98.284 23.9085 98.1728 25.0801 98.1728 26.6911V34.2334H93.9109V26.1419C93.9109 24.6407 93.7997 23.5789 93.5773 22.8833C93.355 22.2242 93.0214 21.7117 92.5767 21.3821C92.132 21.0526 91.5761 20.9062 90.946 20.9062C90.2419 20.9062 89.6119 21.1258 89.0189 21.5286C88.4259 21.9313 88.0183 22.5172 87.7218 23.286C87.4253 24.0183 87.2771 25.2265 87.2771 26.8375V34.27H83.0151V17.5377H83.0522Z"
+                                fill="black" />
+                            <path
+                                d="M130.119 27.0938H116.48C116.666 28.2654 117.222 29.2174 118.074 29.913C118.926 30.6087 120.038 30.9748 121.335 30.9748C122.929 30.9748 124.3 30.4256 125.412 29.3272L129.007 30.9748C128.117 32.2197 127.043 33.135 125.782 33.7574C124.522 34.3798 123.077 34.6728 121.335 34.6728C118.667 34.6728 116.517 33.8306 114.85 32.1831C113.182 30.5355 112.33 28.4485 112.33 25.9588C112.33 23.3959 113.145 21.2723 114.813 19.5881C116.48 17.9039 118.556 17.0618 121.076 17.0618C123.744 17.0618 125.894 17.9039 127.598 19.5881C129.266 21.2723 130.119 23.5057 130.119 26.2517V27.0938ZM125.894 23.7986C125.597 22.8833 125.078 22.1144 124.226 21.5286C123.374 20.9428 122.447 20.6499 121.335 20.6499C120.149 20.6499 119.112 20.9794 118.222 21.6384C117.666 22.0412 117.147 22.7734 116.666 23.7986H125.894Z"
+                                fill="black" />
+                            <path d="M133.231 11.0572H137.493V34.2334H133.231V11.0572Z" fill="black" />
+                            <path
+                                d="M149.427 17.0984C151.021 17.0984 152.54 17.5011 153.949 18.27C155.357 19.0755 156.469 20.1373 157.247 21.492C158.025 22.8467 158.433 24.3112 158.433 25.8856C158.433 27.4599 158.025 28.9245 157.247 30.3158C156.469 31.7071 155.357 32.7689 153.986 33.5377C152.615 34.3066 151.095 34.7094 149.464 34.7094C147.018 34.7094 144.98 33.8673 143.238 32.1464C141.533 30.4256 140.644 28.3753 140.644 25.9222C140.644 23.3226 141.608 21.1258 143.572 19.405C145.24 17.8307 147.204 17.0984 149.427 17.0984ZM149.501 21.0526C148.167 21.0526 147.093 21.492 146.203 22.4073C145.314 23.3226 144.869 24.4577 144.869 25.8856C144.869 27.3501 145.314 28.5217 146.166 29.4371C147.018 30.3524 148.13 30.7917 149.464 30.7917C150.799 30.7917 151.91 30.3524 152.8 29.4371C153.689 28.5217 154.134 27.3501 154.134 25.9222C154.134 24.4943 153.689 23.3226 152.837 22.4073C151.947 21.492 150.836 21.0526 149.501 21.0526Z"
+                                fill="black" />
+                            <path
+                                d="M161.99 17.5377H166.252V19.2586C167.216 18.4531 168.105 17.9039 168.883 17.5744C169.662 17.2448 170.477 17.0984 171.292 17.0984C172.96 17.0984 174.405 17.6842 175.554 18.8192C176.555 19.8078 177.037 21.2723 177.037 23.1762V34.2334H172.849V26.9107C172.849 24.897 172.775 23.5789 172.589 22.9199C172.404 22.2609 172.108 21.7483 171.626 21.4188C171.144 21.0892 170.625 20.9062 169.958 20.9062C169.106 20.9062 168.365 21.1991 167.735 21.7483C167.105 22.3341 166.697 23.103 166.437 24.0915C166.326 24.6041 166.252 25.7391 166.252 27.4966V34.1968H161.99V17.5377Z"
+                                fill="black" />
+                        </svg>
+                    </a>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><img src="img/close.svg" alt="close"></span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class=" navbar-collapse sbold" id="453">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#products" onclick="hide">Планер</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#prosc">Будильник</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#targets">Блокировка</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#payment">Расписание</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#reviews">Отзывы</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#que">Контакти</a>
+                            </li>
+                            <li class="nav-item">
+                                <button class="btn btn-navbar sbold d-flex d-lg-none" data-toggle="modal"
+                                    data-target="#question">Регистрация</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="question" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><img src="img/close.svg" alt="close"></span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="question-modal">
+                        <h2>Регистрация</h2>
+                        <p>Подключайся и прокачай все свои скилы!</p>
+                        <form class="form forml" id="form1" action="">
+
+                            <div>
+                                <input type="text" id="name1" name="name" value="" placeholder="Имя"
+                                    required="required">
+                                <label for="name1">Имя</label>
+                            </div>
+
+                            <div>
+                                <input type="tel" name="tel" id="phone1" value="" placeholder="Телефон"
+                                    required="required">
+                                <label class="fixphone" for="phone1">Телефон</label></div>
+                                <div>
+                                    <input type="email" id="email1" name="email" value="" placeholder="Email"
+                                        required="required">
+                                    <label for="email1" class="fixphone">Email</label>
+                                </div>
+                            <div>
+                                <input type="text" name="message" id="text1" placeholder="Университет"
+                                    required="required">
+                                <label for="text1">Университет</label></div>
+
+                            <button type="submit" name="submit">Зарегистрироваться</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="price" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><img src="img/close.svg" alt="close"></span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="question-modal">
+                        <h2>Регистрация</h2>
+                        <p>Подключайся и прокачай все свои скилы!
+                        </p>
+                        <form class="form forml" id="form2" action="">
+
+                            <div>
+                                <input type="text" id="name2" name="name" value="" placeholder="Имя"
+                                    required="required">
+                                <label for="name2">Имя</label>
+                            </div>
+
+                            <div>
+                                <input type="tel" name="tel" id="phone2" value="" placeholder="Телефон"
+                                    required="required">
+                                <label class="fixphone" for="phone2">Телефон</label></div>
+                                <div>
+                                    <input type="email" id="email2" name="email" value="" placeholder="Email"
+                                        required="required">
+                                    <label for="email2" class="fixphone">Email</label>
+                                </div>
+                            <div>
+                                <input type="text" name="message" id="text2" placeholder="Университет"
+                                    required="required">
+                                <label for="text2">Университет</label></div>
+
+                            <button type="submit" name="submit">Зарегистрироваться</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="sps" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><img src="img/close.svg" alt="close"></span>
+                    </button>
+                </div>
+                <div class="modal-body sps">
+                    <div class="question-modal ">
+                        <h2>Спасибо за регистрацию!</h2>
+                        <button type="button" class="sps-btn" data-dismiss="modal" aria-label="Close">На
+                            главную</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="sps1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><img src="img/close.svg" alt="close"></span>
+                    </button>
+                </div>
+                <div class="modal-body sps">
+                    <div class="question-modal ">
+                        <h2>Подтвердите свою регистрацию в сообщении на почте.</h2>
+                        <p>Если сообщение не пришло через несколько минут проверьте папку «Спам»</p>
+                        <button type="button" class="sps-btn" data-dismiss="modal" aria-label="Close">На
+                            главную</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <header>
+        <nav class="navbar navbar-expand-xl navbar-light fixed-top" id="navbar">
+            <a class="navbar-brand exbold" href="#home"><svg class="logo" width="177" height="48" viewBox="0 0 177 48"
+                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M42.7305 8.34784V39.6522C46.3994 35.4417 48.586 29.9863 48.586 24.0183C48.586 18.0504 46.3624 12.5584 42.7305 8.34784Z"
+                        fill="#95CA49" />
+                    <path
+                        d="M31.6495 40.7872C29.2406 41.9588 26.6093 42.5446 23.7557 42.5446C18.6784 42.5446 14.3423 40.714 10.7475 37.0892C7.15264 33.4645 5.33668 29.0343 5.33668 23.7986C5.33668 18.7094 7.15264 14.3158 10.7845 10.6911C14.4165 7.06636 18.7896 5.2357 23.8668 5.2357C26.8317 5.2357 29.4629 5.85812 31.8719 7.10297C34.2437 8.34783 36.3562 10.2151 38.1721 12.6682V4.24714C34.2437 1.57437 29.4629 0 24.2745 0C10.8587 0 0 10.7277 0 23.9817C0 37.2357 10.8587 47.9634 24.2745 47.9634C29.4259 47.9634 34.2067 46.389 38.1351 43.6796V35.5515C36.2079 37.8947 34.0584 39.6156 31.6495 40.7872Z"
+                        fill="#95CA49" />
+                    <path
+                        d="M24.2746 9.66589C21.7174 9.66589 19.3455 10.2883 17.159 11.5332C14.9724 12.778 13.2677 14.5355 11.9705 16.8055C10.6734 19.0755 10.0063 21.4554 10.0063 23.9817C10.0063 26.4714 10.6364 28.8512 11.9335 31.1579C13.2306 33.4279 14.9724 35.222 17.159 36.4668C19.3455 37.7483 21.6803 38.3707 24.2004 38.3707C26.7205 38.3707 29.1295 37.7483 31.3901 36.4668C33.6508 35.222 35.3927 33.5011 36.6156 31.3409C37.8386 29.1808 38.4316 26.7643 38.4316 24.0915C38.4316 19.9908 37.0604 16.5492 34.3179 13.8032C31.6125 11.0572 28.24 9.66589 24.2746 9.66589Z"
+                        fill="#95CA49" />
+                    <path
+                        d="M74.417 17.5377H78.6789V34.27H74.417V32.5126C73.6017 33.2815 72.7493 33.8673 71.934 34.1968C71.0816 34.5263 70.1921 34.7094 69.2286 34.7094C67.042 34.7094 65.1519 33.8673 63.5583 32.1831C61.9647 30.4988 61.1494 28.4119 61.1494 25.9222C61.1494 23.3226 61.9277 21.2357 63.4472 19.5881C65.0037 17.9405 66.8567 17.0984 69.0803 17.0984C70.0809 17.0984 71.0445 17.2815 71.934 17.6842C72.8234 18.0503 73.6387 18.6361 74.417 19.405V17.5377V17.5377ZM69.9327 20.9794C68.6356 20.9794 67.5238 21.4554 66.6714 22.3707C65.819 23.286 65.3743 24.4577 65.3743 25.8856C65.3743 27.3135 65.819 28.5217 66.7085 29.4371C67.5979 30.3524 68.6727 30.8284 69.9698 30.8284C71.3039 30.8284 72.4158 30.3524 73.3052 29.4371C74.1946 28.5217 74.6394 27.3135 74.6394 25.849C74.6394 24.3844 74.1946 23.2128 73.3052 22.2975C72.4158 21.4188 71.3039 20.9794 69.9327 20.9794Z"
+                        fill="black" />
+                    <path
+                        d="M83.0522 17.5377H87.3141V19.4416C88.0553 18.6361 88.8336 18.0503 89.7231 17.6842C90.6125 17.2815 91.5761 17.0984 92.6138 17.0984C93.6885 17.0984 94.615 17.3547 95.4674 17.8673C96.3198 18.3799 96.9869 19.1121 97.5057 20.1007C98.1728 19.1121 99.0252 18.3799 99.9887 17.8673C100.952 17.3547 102.027 17.0984 103.213 17.0984C104.399 17.0984 105.474 17.3913 106.4 17.9405C107.327 18.4897 107.957 19.222 108.364 20.1007C108.772 20.9794 108.957 22.4439 108.957 24.4577V34.27H104.695V25.7757C104.695 23.8718 104.473 22.5904 103.991 21.9313C103.509 21.2723 102.805 20.9062 101.842 20.9062C101.101 20.9062 100.471 21.1258 99.8776 21.5286C99.2846 21.9313 98.8769 22.5172 98.5805 23.2128C98.284 23.9085 98.1728 25.0801 98.1728 26.6911V34.2334H93.9109V26.1419C93.9109 24.6407 93.7997 23.5789 93.5773 22.8833C93.355 22.2242 93.0214 21.7117 92.5767 21.3821C92.132 21.0526 91.5761 20.9062 90.946 20.9062C90.2419 20.9062 89.6119 21.1258 89.0189 21.5286C88.4259 21.9313 88.0183 22.5172 87.7218 23.286C87.4253 24.0183 87.2771 25.2265 87.2771 26.8375V34.27H83.0151V17.5377H83.0522Z"
+                        fill="black" />
+                    <path
+                        d="M130.119 27.0938H116.48C116.666 28.2654 117.222 29.2174 118.074 29.913C118.926 30.6087 120.038 30.9748 121.335 30.9748C122.929 30.9748 124.3 30.4256 125.412 29.3272L129.007 30.9748C128.117 32.2197 127.043 33.135 125.782 33.7574C124.522 34.3798 123.077 34.6728 121.335 34.6728C118.667 34.6728 116.517 33.8306 114.85 32.1831C113.182 30.5355 112.33 28.4485 112.33 25.9588C112.33 23.3959 113.145 21.2723 114.813 19.5881C116.48 17.9039 118.556 17.0618 121.076 17.0618C123.744 17.0618 125.894 17.9039 127.598 19.5881C129.266 21.2723 130.119 23.5057 130.119 26.2517V27.0938ZM125.894 23.7986C125.597 22.8833 125.078 22.1144 124.226 21.5286C123.374 20.9428 122.447 20.6499 121.335 20.6499C120.149 20.6499 119.112 20.9794 118.222 21.6384C117.666 22.0412 117.147 22.7734 116.666 23.7986H125.894Z"
+                        fill="black" />
+                    <path d="M133.231 11.0572H137.493V34.2334H133.231V11.0572Z" fill="black" />
+                    <path
+                        d="M149.427 17.0984C151.021 17.0984 152.54 17.5011 153.949 18.27C155.357 19.0755 156.469 20.1373 157.247 21.492C158.025 22.8467 158.433 24.3112 158.433 25.8856C158.433 27.4599 158.025 28.9245 157.247 30.3158C156.469 31.7071 155.357 32.7689 153.986 33.5377C152.615 34.3066 151.095 34.7094 149.464 34.7094C147.018 34.7094 144.98 33.8673 143.238 32.1464C141.533 30.4256 140.644 28.3753 140.644 25.9222C140.644 23.3226 141.608 21.1258 143.572 19.405C145.24 17.8307 147.204 17.0984 149.427 17.0984ZM149.501 21.0526C148.167 21.0526 147.093 21.492 146.203 22.4073C145.314 23.3226 144.869 24.4577 144.869 25.8856C144.869 27.3501 145.314 28.5217 146.166 29.4371C147.018 30.3524 148.13 30.7917 149.464 30.7917C150.799 30.7917 151.91 30.3524 152.8 29.4371C153.689 28.5217 154.134 27.3501 154.134 25.9222C154.134 24.4943 153.689 23.3226 152.837 22.4073C151.947 21.492 150.836 21.0526 149.501 21.0526Z"
+                        fill="black" />
+                    <path
+                        d="M161.99 17.5377H166.252V19.2586C167.216 18.4531 168.105 17.9039 168.883 17.5744C169.662 17.2448 170.477 17.0984 171.292 17.0984C172.96 17.0984 174.405 17.6842 175.554 18.8192C176.555 19.8078 177.037 21.2723 177.037 23.1762V34.2334H172.849V26.9107C172.849 24.897 172.775 23.5789 172.589 22.9199C172.404 22.2609 172.108 21.7483 171.626 21.4188C171.144 21.0892 170.625 20.9062 169.958 20.9062C169.106 20.9062 168.365 21.1991 167.735 21.7483C167.105 22.3341 166.697 23.103 166.437 24.0915C166.326 24.6041 166.252 25.7391 166.252 27.4966V34.1968H161.99V17.5377Z"
+                        fill="black" />
+                </svg>
+            </a>
+            <button class="navbar-toggler" data-toggle="modal" data-target="#nav">
+                <span class="navbar-toggler-icon"><svg width="24" height="16" viewBox="0 0 24 16" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <rect width="24" height="2" fill="white" />
+                        <rect y="7" width="24" height="2" fill="white" />
+                        <rect y="14" width="24" height="2" fill="white" />
+                    </svg></span>
+            </button>
+
+            <div class="collapse navbar-collapse sbold" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#products">Планер</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#prosc">Будильник</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#targets">Блокировка</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#payment">Расписание</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#reviews">Отзывы</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#que">Контакты</a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-navbar sbold d-flex d-xl-none" data-toggle="modal"
+                            data-target="#question">Зарегистрироваться</button>
+                    </li>
+                </ul>
+            </div>
+            <div class="d-none d-lg-flex">
+                <button class="btn btn-navbar sbold d-none d-xl-flex" data-toggle="modal"
+                    data-target="#question">Зарегистрироваться</button>
+            </div>
+        </nav>
+    </header>
+    <div class="back">
+        <section class="first" id="home">
+            <div class="container">
+                <div class="row first-block">
+                    <div class="col-12 col-md-12 col-lg-6 left">
+                        <div class="first-block-title">
+                            <h1>Приложение <br> для студентов</h1>
+                            <h4>упрощает твою жизнь</h4>
+                        </div>
+                        <div>
+                            <div class="row">
+                                <div class="col-12 col-md-6 spec ">
+                                    <div>
+                                        <img src="img/bed.svg" class="img-fluid" width="56" height="56" alt="corn">
+                                        <h5>Просыпайся <br> с нами</h5>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 spec">
+                                    <div>
+                                        <img src="img/note.svg" class="img-fluid"  width="56" height="56" alt="corn">
+                                        <h5>Планируй <br> с нами</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-md-6 spec ">
+                                    <div>
+                                        <img src="img/laptop.svg" class="img-fluid"  width="56" height="56" alt="corn">
+                                        <h5>Разрабатывай <br> с нами</h5>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 spec">
+                                    <div>
+                                        <img src="img/global.svg" class="img-fluid"  width="56" height="56" alt="corn">
+                                        <h5>Развивайся <br> с нами</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-12 col-lg-6 right">
+                        <div><img src="img/group.svg" alt="boxs"></div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 col-md-5 offset-md-7 fix-right">
+                        <a href="#products" class="more">Детальнее<img src="img/Vector.svg" alt="/"></a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section class="que" id="products">
+
+
+            <section class="que">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-lg-7 que-left">
+                            <h2>Активные задачи</h2>
+                            <form class="form forml" id="form" action="">
+    
+                                <div>
+                                    <input type="text" id="name" name="name" value="" placeholder="Имя"
+                                        required="required">
+                                    <label for="name">Что учим?</label>
+                                </div>
+    
+                                    <div>
+                                        <input type="email" id="email" name="email" value="" placeholder="Email"
+                                            required="required">
+                                        <label for="email" class="fixphone">Когда дедлайн?</label>
+                                    </div>
+                                <div>
+                                    <input type="text" name="message" id="text" placeholder="Обращение или вопрос"
+                                        required="required">
+                                    <label for="text">Обращение или вопрос</label></div>
+    
+                                <button type="submit" name="submit">Добавить задачу</button>
+                            </form>
+                        </div>
+                        <div class="col-12 col-lg-5 que-right" id="que">
+                            
+
+                            <table class="comicGreen" >
+                                <thead>
+                                <tr>
+                                <th>Материал</th>
+                                <th>Дата начала</th>
+                                <th>Дата сдачи</th>
+                                <th>Дополнительрная Информация</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                <td>Нормальное распредиление</td>
+                                <td>cell2_1</td>
+                                <td>cell3_1</td>
+                                <td>cell4_1</td>
+                                </tr>
+                                <tr>
+                                <td>cell1_2</td>
+                                <td>cell2_2</td>
+                                <td>cell3_2</td>
+                                <td>cell4_2</td>
+                                </tr>
+                                <tr>
+                                <td>cell1_3</td>
+                                <td>cell2_3</td>
+                                <td>cell3_3</td>
+                                <td>cell4_3</td>
+                                </tr>
+                                <tr>
+                                <td>cell1_4</td>
+                                <td>cell2_4</td>
+                                <td>cell3_4</td>
+                                <td>cell4_4</td>
+                                </tr>
+                                </tbody>
+                                </table>
+
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+
+            <!-- <div class="container">
+                <div class="row">
+                    <div class="col-12 products-title">
+                        <h2 style="color: white;" >Активные задачи</h2>
+                    </div>
+                </div>
+                <div class="">
+                    
+                            <div class="col-12 col-lg-7 que-left">
+                        <form class = "form forml">
+                            <div>
+                            <input id ="studied" placeholder="Что учим?" type="text"/>
+                            </div>
+                            <div>
+                            <input type="text" placeholder="Когда дедлайн?" />
+                            </div>
+                            <div>
+                            <input type="text" placeholder = "Как учим?" />
+                            </div>
+                            
+                            <button  data-toggle="modal" data-target="#price">Добавть задачу</button>
+                        </form>
+    
+                    </div> -->
+
+                    <!-- <div class="col-12 col-lg-5 que-right">
+
+                        <table class="comicGreen" style="height: 165px;" width="433">
+                            <thead>
+                            <tr>
+                            <th>Материал</th>
+                            <th>Дата начала</th>
+                            <th>Дата сдачи</th>
+                            <th>Дополнительрная Информация</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                            <td>Нормальное распредиление</td>
+                            <td>cell2_1</td>
+                            <td>cell3_1</td>
+                            <td>cell4_1</td>
+                            </tr>
+                            <tr>
+                            <td>cell1_2</td>
+                            <td>cell2_2</td>
+                            <td>cell3_2</td>
+                            <td>cell4_2</td>
+                            </tr>
+                            <tr>
+                            <td>cell1_3</td>
+                            <td>cell2_3</td>
+                            <td>cell3_3</td>
+                            <td>cell4_3</td>
+                            </tr>
+                            <tr>
+
+                    </div> -->
+
+                <!-- </div> -->
+            
+                <!-- <div class="row">
+                    <div class="col-12 d-flex justify-content-center">
+                        <button class="btn-price" data-toggle="modal" data-target="#price">Добавть задачу</button>
+                    </div>
+                </div> -->
+            
+       
+        <section id="prosc">
+            <div class="prosc">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-md-5 prosc-title">
+                            <h2>Переваги <br> біопосуду Amelon</h2>
+                        </div>
+                        <div class="col-12 col-md-7">
+                            <div class="row">
+                                <div class="col-12 col-md-6 pros">
+                                    <div>
+                                        <img src="img/1corn.svg" class="img-fluid" alt="corn">
+                                        <h5>Вироблено з <br> кукурудзяного <br> крохмалю</h5>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 pros">
+                                    <div>
+                                        <img src="img/microwave.svg" class="img-fluid" alt="microwave">
+                                        <h5>Можна гріти в <br> мікрохвильовці</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-md-6 pros">
+                                    <div>
+                                        <img src="img/1eco.svg" class="img-fluid" alt="eco">
+                                        <h5>Безпечний для <br> людини та довкілля</h5>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 pros">
+                                    <div>
+                                        <img src="img/1freezer.svg" class="img-fluid" alt="freezer">
+                                        <h5>Можна заморожувати <br> до –20°C</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-md-6 pros">
+                                    <div>
+                                        <img src="img/leaf.svg" class="img-fluid" alt="leaf">
+                                        <h5>В основі <br> біоматеріал</h5>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 pros">
+                                    <div>
+                                        <img src="img/1coffee.svg" class="img-fluid" alt="corn">
+                                        <h5>Можна подавати <br> гарячі страви <br> та напої до +100°C</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="targets">
+            <div class="container">
+                <div class="row targets">
+                    <div class="col-12 col-md-6 col-lg-5 fix-margin">
+                        <h2>Однаково добре <br> підійде для різних <br> цілей </h2>
+                        <div class="target">
+                            <h4>Поїздки за місто,<br> пікніки, походи</h4>
+                            <img src="img/tourist.png" alt="camping">
+                        </div>
+                        <div class="target">
+                            <h4>Сервіровка фуршетів та <br> кава-брейків</h4>
+                            <img src="img/ket.png" alt="furshet">
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-5 offset-lg-2 fix-margin">
+                        <div class="target">
+                            <h4>Ресторани, кафе, <br> кейтеринг, доставка їжі</h4>
+                            <img src="img/del.png" alt="delivery">
+                        </div>
+                        <div class="target">
+                            <h4>Упаковка, зберігання, <br> заморожування продуктів</h4>
+                            <img src="img/stor.png" alt="storage">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="price" id="prices">
+            <div class="container">
+                <div class="row price-row">
+                    <div class="col-12 col-lg-3 price-left">
+                        <h2>Ціни на <br> біопосуд</h2>
+                    </div>
+                    <img src="img/mannet.png" alt="man with notebook">
+                    <div class="col-12 col-lg-8 offset-lg-1 price-right">
+                        <h3>Дізнайтеся умови <br> та оберіть найвигідніші</h3>
+                        <p>Відправимо повний прайс продукції Amelon, щоб ви могли все взважити та обміркувати. Наші
+                            консультанти завжди готові відповісти на будь-які питання.</p>
+                        <button class="" data-toggle="modal" data-target="#price">Отримати прайс</button>
+                        <div>
+                            <p>Бажаєте поговорити з живою людиною та щось запитати?</p>
+                            <a href="tel:+380504200063">+380 (50) 420 00 63 </a> <span> | </span>
+                            <a href="tel:+380674572356"> +380 (67) 457 23 56</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="clients" id="clients">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 clients-col">
+                        <h2>
+                            Здесь могли бы быть наши партнеры
+                        </h2>
+                        <div class="logo-clients">
+                            <div>
+                                <img src="img/socar.png" alt="socar">
+                                <div class="mobile-width d-flex d-md-none">
+                                    <img src="img/eateasy.png" alt="eateasy">
+
+                                    <img src="img/kanapa.png" alt="kanapa">
+                                </div>
+                                <img src="img/eateasy.png" class="d-none d-md-block" alt="eateasy">
+                                <img src="img/goodwine.png" alt="goodwine">
+                                <img src="img/bao.png" class="d-none d-md-block" alt="bao">
+                                <img src="img/novus.png" alt="novus">
+                            </div>
+                            <div>
+                                <img src="img/alaska.png" alt="alaska">
+                                <img src="img/mafia.png" alt="mafia">
+                                <img src="img/kanapa.png" class="d-none d-md-block" alt="kanapa">
+                                <img src="img/ringUkr.png" alt="ringUkraine">
+                                <img src="img/bao.png" class="d-md-none" alt="bao">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="reviews">
+            <div class="reviews">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2 class="reviews-title">
+                                Отзывы
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="reviews-box">
+                    <div>
+                        <div class="review">
+                            <p>
+                                Супер приложение для студентов! Пользуюсь всеми функциями, без рекламы, бесплатно! Находка.
+
+                            </p>
+                            <div>
+                                <div>
+                                    <p>Игорь</p>
+                                    <p>Харьков</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="review sec ">
+                            <p>
+                                Приложение понравилось, работает корректно, заменило три ранее используемых, для студентов - самое то! Рекомендую!
+                            </p>
+                            <div>
+                                <div>
+                                    <p>Виктория</p>
+                                    <p>Киев</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="review sec ">
+                            <p>
+                                Очень нравится функция "Отсчёта времени до дедлайна", теперь не переживаю о своём тайм-менеджменте!
+                            </p>
+                            <div>
+                                <div>
+                                    <p>Александра</p>
+                                    <p>Днепр</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 gallery-title ">
+                        <h2>
+                            Приложение умеет
+                        </h2>
+                    </div>
+                    <div class="col-12 gallery">
+                        <div class="gallery-img">
+                            <img class="image" src="img/gallery/img1.jpg" alt="/">
+                        </div>
+                        <div class="gallery-img ">
+                            <img class="image" src="img/gallery/img2.jpg" alt="/">
+                        </div>
+                        <div class="gallery-img ">
+                            <img class="image" src="img/gallery/img3.jpg" alt="/">
+                        </div>
+                        <div class="gallery-img ">
+                            <img  class="image" src="img/gallery/img4.jpg" alt="/">
+                        </div>
+                        <div class="gallery-img">
+                            <img class="image" src="img/gallery/img5.jpg" alt="/">
+                        </div>
+                        <div class="gallery-img">
+                            <img class="image" src="img/gallery/img6.jpg" alt="/">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="que">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-7 que-left">
+                        <h2>Есть вопрос?</h2>
+                        <p>Заполните эту форму. В ближайшее время мы вам ответим.</p>
+                        <form class="form forml" id="form" action="">
+
+                            <div>
+                                <input type="text" id="name" name="name" value="" placeholder="Имя"
+                                    required="required">
+                                <label for="name">Имя</label>
+                            </div>
+
+                                <div>
+                                    <input type="email" id="email" name="email" value="" placeholder="Email"
+                                        required="required">
+                                    <label for="email" class="fixphone">Email</label>
+                                </div>
+                            <div>
+                                <input type="text" name="message" id="text" placeholder="Обращение или вопрос"
+                                    required="required">
+                                <label for="text">Обращение или вопрос</label></div>
+
+                            <button type="submit" name="submit">Отправить</button>
+                        </form>
+                    </div>
+                    <div class="col-12 col-lg-5 que-right" id="que">
+                        <h4>
+                            Контакты
+                        </h4>
+                        <a href="tel:+380(50)4200063">+380 (97) 206 53 81</a>
+                        <a href="mailto:liprikonchi@gmail.com">liprikonchi@gmail.com</a>
+
+
+                        <div class="social">
+                            <a href="https://www.instagram.com/streamer_macksimka/" role="button" target="_blank"><img
+                                    src="img/insta.svg" alt="insta"></a>
+                            <a href="https://www.facebook.com/" role="button" target="_blank"><img
+                                    src="img/fb.svg" alt="fb"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <p>© 2020, Все права защищены</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
